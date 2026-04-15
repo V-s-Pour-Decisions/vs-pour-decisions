@@ -55,11 +55,7 @@
 
 <form action="https://formspree.io/f/xvzdzkne" method="POST">
 
-  <!-- Hidden: email subject -->
   <input type="hidden" name="_subject" value="New Booking Request - V's Pour Decisions">
-
-  <!-- Hidden: redirect after submit -->
-  <input type="hidden" name="_redirect" value="https://ywill77.github.io/vs-pour-decisions/thank-you.html">
 
   <input type="text" name="name" placeholder="Full Name" required>
 
@@ -72,52 +68,72 @@
   <input type="text" name="location" placeholder="Event Location">
 
   <select name="service">
-    <option value="">Select Service</option>
+    <option value="">Service Type</option>
     <option>Basic Bartending</option>
     <option>Full Cocktail Experience</option>
     <option>Wedding / Large Event</option>
   </select>
 
-  <textarea name="details" rows="4" placeholder="Event details (guest count, vibe, etc.)"></textarea>
+  <textarea name="details" rows="3" placeholder="Tell us about your event..."></textarea>
 
-  <!-- Sends a copy to you -->
-  <input type="hidden" name="_replyto" value="vspourdecisions@gmail.com">
-
-  <button type="submit" class="btn">Submit Request</button>
+  <button type="submit" class="btn">Request Booking</button>
 
 </form>
-  }
+  .form-container {
+  max-width: 520px;
+  margin: auto;
+}
 
-  input, textarea, select {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    background: #111;
-    border: 1px solid #333;
-    color: white;
-    border-radius: 5px;
-  }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
 
-  input:focus, textarea:focus {
-    outline: none;
-    border-color: gold;
-  }
+input, textarea, select {
+  width: 100%;
+  padding: 14px 4px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #444;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
 
-  .btn {
-    width: 100%;
-    padding: 14px;
-    background: gold;
-    color: black;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-  }
+input::placeholder,
+textarea::placeholder {
+  color: #777;
+}
 
-  .btn:hover {
-    background: #d4af37;
-  }
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-bottom: 1px solid gold;
+}
 
+select {
+  color: #aaa;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn {
+  margin-top: 25px;
+  padding: 14px;
+  background: transparent;
+  color: gold;
+  border: 1px solid gold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: gold;
+  color: black;
+}
   footer {
     text-align: center;
     padding: 20px;
